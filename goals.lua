@@ -4,7 +4,7 @@ function Goals(filename)
   local absolutePath = SKIN:MakePathAbsolute(filename)
   local goalsFile = io.open(absolutePath, "r")
 
-  local errorMessageFile = "Error: Goals file not found!"
+  local errorMessageFile = "Error: Goals file (" .. absolutePath .. ") not found!"
   if goalsFile == nil then
     SKIN:Bang("!Log", errorMessageFile, "Error")
     return errorMessageFile
